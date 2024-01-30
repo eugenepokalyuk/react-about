@@ -17,7 +17,8 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
     }
 
     const CANVAS_WIDTH = ifMobile(window.innerWidth, (window.innerWidth * 0.6))
-    const CANVAS_HEIGHT = ifMobile((window.innerHeight / 1.5), window.innerHeight)
+    const CANVAS_HEIGHT = ifMobile((window.innerHeight - 300), window.innerHeight)
+    // const CANVAS_HEIGHT = ifMobile((window.innerHeight), window.innerHeight)
 
     useEffect(() => {
         engineRef.current = Matter.Engine.create();
@@ -34,17 +35,17 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
         });
 
         const context = render.context;
-        context.font = ifMobile('24px IBM Plex Mono', '32px IBM Plex Mono');
+        context.font = ifMobile('14px IBM Plex Mono', '32px IBM Plex Mono');
 
         const randomInRange = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
         const figures = sceneData.map((item) => {
             const textSize = context.measureText(item.name);
-            const textWidth = ifMobile((textSize.width + 24), (textSize.width + 60)); // 8px padding с каждой стороны
+            const textWidth = ifMobile((textSize.width + 50), (textSize.width + 60)); // 8px padding с каждой стороны
             // context.font = ifMobile('16px IBM Plex Mono', '32px IBM Plex Mono');
 
             // const textWidth = textSize.width + 19; // 8px padding с каждой стороны
-            const textHeight = 60; // Высота текста + padding
+            const textHeight = ifMobile(55, 60); // Высота текста + padding
             // const textHeight = 32; // Высота текста + padding
 
             const figure: any = Matter.Bodies.rectangle(randomInRange(100, CANVAS_WIDTH), 100, textWidth, textHeight + 5, {

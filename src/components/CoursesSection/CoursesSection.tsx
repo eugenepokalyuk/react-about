@@ -11,7 +11,9 @@ interface CoursesSectionProps {
 
 const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData }) => {
     return (
-        <section className="flex flex-col p-5 h-full md:h-screen">
+        <section
+            className="flex flex-col p-5 h-full md:h-screen overflow-hidden"
+        >
             <div className='max-h-full md:max-h-screen overflow-y-auto'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">ПРОШЁЛ КУРСЫ</div>
