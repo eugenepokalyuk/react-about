@@ -23,7 +23,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData }) => {
                                 <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{courseGroup.title}</h3>
                                 <ul>
                                     {courseGroup.courses.map((course, courseIdx) => (
-                                        <li key={courseIdx} className="text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond mt-3 hover:cursor-pointer hover:underline">{course}</li>
+                                        <li key={courseIdx} className="text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline">{course}</li>
                                     ))}
                                 </ul>
                             </li>
@@ -39,7 +39,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData }) => {
                                 <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{courseGroup.title}</h3>
                                 <ul>
                                     {courseGroup.courses.map((course, courseIdx) => (
-                                        <li key={courseIdx} className="text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond mt-3 hover:cursor-pointer hover:underline">{course}</li>
+                                        <li key={courseIdx} className="text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline">{course}</li>
                                     ))}
                                 </ul>
                             </li>
