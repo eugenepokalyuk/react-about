@@ -17,7 +17,7 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
     }
 
     const CANVAS_WIDTH = ifMobile(window.innerWidth, (window.innerWidth * 0.6))
-    const CANVAS_HEIGHT = ifMobile((window.innerHeight - 300), window.innerHeight)
+    const CANVAS_HEIGHT = ifMobile((window.innerHeight - 100), window.innerHeight)
     // const CANVAS_HEIGHT = ifMobile((window.innerHeight), window.innerHeight)
 
     useEffect(() => {
