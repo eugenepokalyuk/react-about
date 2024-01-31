@@ -117,21 +117,21 @@ const App = () => {
     color: "#FFFFFF",
     backgroundColor: "#CD6799"
   },
-  {
-    name: "Frontend",
-    color: "#FFFFFF",
-    backgroundColor: "#6CC24A"
-  },
+  // {
+  //   name: "Frontend",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#6CC24A"
+  // },
   {
     name: "npm",
     color: "#FFFFFF",
     backgroundColor: "#CB3837"
   },
-  {
-    name: "Matter.js",
-    color: "#FFFFFF",
-    backgroundColor: "#00A8C5"
-  },
+  // {
+  //   name: "Matter.js",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#00A8C5"
+  // },
   // {
   //   name: "SQLite",
   //   color: "#FFFFFF",
@@ -177,16 +177,16 @@ const App = () => {
     color: "#000000",
     backgroundColor: '#41B883'
   },
-  {
-    name: "npx",
-    color: "#000000",
-    backgroundColor: '#C12127'
-  },
-  {
-    name: "axios",
-    color: "#FFFFFF",
-    backgroundColor: '#3E863D'
-  },
+  // {
+  //   name: "npx",
+  //   color: "#000000",
+  //   backgroundColor: '#C12127'
+  // },
+  // {
+  //   name: "axios",
+  //   color: "#FFFFFF",
+  //   backgroundColor: '#3E863D'
+  // },
     // {
     //   name: "dotenv",
     //   color: "#000000",
