@@ -18,7 +18,6 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
 
     const CANVAS_WIDTH = ifMobile(window.innerWidth, (window.innerWidth * 0.6))
     const CANVAS_HEIGHT = ifMobile((window.innerHeight - 100), window.innerHeight)
-    // const CANVAS_HEIGHT = ifMobile((window.innerHeight), window.innerHeight)
 
     useEffect(() => {
         engineRef.current = Matter.Engine.create();
@@ -35,23 +34,16 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
         });
 
         const context = render.context;
-        context.font = ifMobile('14px IBM Plex Mono', '32px IBM Plex Mono');
+        context.font = ifMobile('16px IBM Plex Mono', '30px IBM Plex Mono');
 
         const randomInRange = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
         const figures = sceneData.map((item) => {
             const textSize = context.measureText(item.name);
             const textWidth = ifMobile((textSize.width + 50), (textSize.width + 60)); // 8px padding с каждой стороны
-            // context.font = ifMobile('16px IBM Plex Mono', '32px IBM Plex Mono');
-
-            // const textWidth = textSize.width + 19; // 8px padding с каждой стороны
-            const textHeight = ifMobile(55, 60); // Высота текста + padding
-            // const textHeight = 32; // Высота текста + padding
-
-            const figure: any = Matter.Bodies.rectangle(randomInRange(100, CANVAS_WIDTH), 100, textWidth, textHeight + 5, {
-                // const figure: any = Matter.Bodies.rectangle(100, 100, textWidth, textHeight, {
+            const textHeight = ifMobile(60, 60); // Высота текста + padding
+            const figure: any = Matter.Bodies.rectangle(randomInRange(100, CANVAS_WIDTH), 100, textWidth, textHeight, {
                 angle: 0,
-                // angle: -1.62,
                 chamfer: {},
                 render: {
                     visible: false,
@@ -61,32 +53,28 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
             figure.label = item.name;
             figure.color = item.color;
             figure.width = textWidth;
-            figure.height = textHeight;
+            figure.height = textHeight - 5;
             return figure;
         });
 
         const ground = Matter.Bodies.rectangle(CANVAS_WIDTH / 2, CANVAS_HEIGHT, CANVAS_WIDTH, 30, {
             isStatic: true, render: {
                 fillStyle: 'transparent',
-                // fillStyle: 'red',
             }
         });
         const leftWall = Matter.Bodies.rectangle(0, CANVAS_HEIGHT / 2, 30, CANVAS_HEIGHT, {
             isStatic: true, render: {
                 fillStyle: 'transparent',
-                // fillStyle: 'green',
             }
         });
         const rightWall = Matter.Bodies.rectangle(CANVAS_WIDTH + 10, CANVAS_HEIGHT / 2, 30, CANVAS_HEIGHT, {
             isStatic: true, render: {
                 fillStyle: 'transparent',
-                // fillStyle: 'blue',
             }
         });
         const topWall = Matter.Bodies.rectangle(CANVAS_WIDTH / 2, 0, CANVAS_WIDTH, 30, {
             isStatic: true, render: {
                 fillStyle: 'transparent',
-                // fillStyle: 'hotpink',
             }
         });
 
@@ -127,6 +115,21 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
                 context.restore(); // Восстанавливаем состояние контекста
             });
         });
+
+        // Создание обработчика столкновений
+        Matter.Events.on(engine, 'collisionStart', function (event: any) {
+            let pairs: any = event.pairs;
+            // Перебор всех столкновений
+            pairs.forEach(function (pair: any) {
+                // Получение столкнувшихся объектов
+                var bodyA = pair.bodyA;
+                var bodyB = pair.bodyB;
+                if (bodyA.isSensor || bodyB.isSensor) {
+                    navigator.vibrate([100, 50, 100]);
+                }
+            });
+        });
+
         // Добавление функции для рисования прямоугольника с округленными углами
         CanvasRenderingContext2D.prototype.roundRect = function (x, y, width, height, radius: any) {
             this.beginPath();
