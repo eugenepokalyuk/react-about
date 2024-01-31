@@ -41,7 +41,9 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
         const figures = sceneData.map((item) => {
             const textSize = context.measureText(item.name);
             const textWidth = ifMobile((textSize.width + 50), (textSize.width + 60)); // 8px padding с каждой стороны
-            const textHeight = ifMobile(60, 60); // Высота текста + padding
+            // const textWidth = textSize.width + 50;
+            const textHeight = 60;
+            // const textHeight = ifMobile(60, 60); // Высота текста + padding
             const figure: any = Matter.Bodies.rectangle(randomInRange(100, CANVAS_WIDTH), 100, textWidth, textHeight, {
                 angle: 0,
                 chamfer: {},

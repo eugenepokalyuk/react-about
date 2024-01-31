@@ -132,16 +132,67 @@ const App = () => {
     color: "#FFFFFF",
     backgroundColor: "#00A8C5"
   },
+  // {
+  //   name: "SQLite",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#003B57"
+  // },
+  // {
+  //   name: "Nginx",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#009639"
+  // }, 
   {
-    name: "SQLite",
-    color: "#FFFFFF",
-    backgroundColor: "#003B57"
+    name: "BEM",
+    color: "#64D544",
+    backgroundColor: '#000000'
   },
   {
-    name: "Nginx",
+    name: "PostCSS",
     color: "#FFFFFF",
-    backgroundColor: "#009639"
-  }];
+    backgroundColor: '#DD3A0A'
+  },
+  {
+    name: "Shadcn UI",
+    color: "#2D2D2D",
+    backgroundColor: '#FFD23F'
+  },
+  {
+    name: "ESLint",
+    color: "#FFFFFF",
+    backgroundColor: '#4B32C3'
+  },
+  // {
+  //   name: "npm scripts",
+  //   color: "#FFFFFF",
+  //   backgroundColor: '#CB3837'
+  // },
+  // {
+  //   name: "cors",
+  //   color: "#FFFFFF",
+  //   backgroundColor: '#F0653D'
+  // },
+  {
+    name: "Electron",
+    color: "#000000",
+    backgroundColor: '#41B883'
+  },
+  {
+    name: "npx",
+    color: "#000000",
+    backgroundColor: '#C12127'
+  },
+  {
+    name: "axios",
+    color: "#FFFFFF",
+    backgroundColor: '#3E863D'
+  },
+    // {
+    //   name: "dotenv",
+    //   color: "#000000",
+    //   backgroundColor: '#61C911'
+    // }
+  ];
   return (
     // <div className="flex justify-between items-start">
     <div className="flex flex-col md:flex-row justify-between items-start">
