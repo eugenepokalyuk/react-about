@@ -116,19 +116,19 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
             });
         });
 
-        // Создание обработчика столкновений
-        Matter.Events.on(engine, 'collisionStart', function (event: any) {
-            let pairs: any = event.pairs;
-            // Перебор всех столкновений
-            pairs.forEach(function (pair: any) {
-                // Получение столкнувшихся объектов
-                var bodyA = pair.bodyA;
-                var bodyB = pair.bodyB;
-                if (bodyA.isSensor || bodyB.isSensor) {
-                    navigator.vibrate([100, 50, 100]);
-                }
-            });
-        });
+        // // Создание обработчика столкновений
+        // Matter.Events.on(engine, 'collisionStart', function (event: any) {
+        //     let pairs: any = event.pairs;
+        //     // Перебор всех столкновений
+        //     pairs.forEach(function (pair: any) {
+        //         // Получение столкнувшихся объектов
+        //         var bodyA = pair.bodyA;
+        //         var bodyB = pair.bodyB;
+        //         if (bodyA.isSensor || bodyB.isSensor) {
+        //             navigator.vibrate([100, 50, 100]);
+        //         }
+        //     });
+        // });
 
         // Добавление функции для рисования прямоугольника с округленными углами
         CanvasRenderingContext2D.prototype.roundRect = function (x, y, width, height, radius: any) {
