@@ -22,7 +22,7 @@ const GreetingSection: React.FC<GreetingSectionProps> = ({ sceneData }) => {
 
             <div className='md:hidden flex flex-col items-center mt-4'>
                 <div className="rounded-full w-16 h-16 md:w-20 md:h-20 flex justify-center items-center hover:cursor-pointer hover:brightness-[.75] hover:opacity-[95%] transition duration-300 ease-in-out">
-                    <a href="https://t.me/PaperCranejs" target="_blank" className='relative'>
+                    <a href="https://github.com/eugenepokalyuk" target="_blank" className='relative'>
                         <p className='text-white ibm-plex absolute top-[50%] -translate-y-[50%] left-[60%] -translate-x-[60%]'>GitHub</p>
                         <IconGitHub />
                     </a>

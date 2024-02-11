@@ -18,6 +18,15 @@ const App = () => {
     title: "Skillbox",
     courses: ["Веб-верстка «Базовый уровень», «Продвинутый уровень»", "JavaScript «Базовый уровень», «Продвинутый уровень»", "Node.js"]
   }];
+  const booksData = [{
+    title: "Александра Королькова",
+    books: [{ name: "Живая типографика", link: "https://awdee.ru/kniga-zhivaya-tipografika-teper-besplatna/" }],
+
+  }];
+  const musicData = [{
+    title: "Слушать хорошоую музыку",
+    playlist: [{ name: "Мой плейлист", link: "https://eugenepokalyuk.github.io/react-music-collection/" }],
+  }];
   const sceneData = [{
     name: "HTML5",
     color: "#FFF",
@@ -177,16 +186,16 @@ const App = () => {
     color: "#000000",
     backgroundColor: '#41B883'
   },
-  // {
-  //   name: "npx",
-  //   color: "#000000",
-  //   backgroundColor: '#C12127'
-  // },
-  // {
-  //   name: "axios",
-  //   color: "#FFFFFF",
-  //   backgroundColor: '#3E863D'
-  // },
+    // {
+    //   name: "npx",
+    //   color: "#000000",
+    //   backgroundColor: '#C12127'
+    // },
+    // {
+    //   name: "axios",
+    //   color: "#FFFFFF",
+    //   backgroundColor: '#3E863D'
+    // },
     // {
     //   name: "dotenv",
     //   color: "#000000",
@@ -198,7 +207,7 @@ const App = () => {
     <div className="flex flex-col md:flex-row justify-between items-start">
       <ProfileSection />
       <GreetingSection sceneData={sceneData} />
-      <CoursesSection coursesData={coursesData} />
+      <CoursesSection coursesData={coursesData} booksData={booksData} musicData={musicData} />
 
       <div className='md:hidden'>
         <Scene sceneData={sceneData} />
