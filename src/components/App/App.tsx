@@ -24,7 +24,7 @@ const App = () => {
 
   }];
   const musicData = [{
-    title: "Слушать хорошоую музыку",
+    title: "Слушать хорошую музыку",
     playlist: [{ name: "Мой плейлист", link: "https://eugenepokalyuk.github.io/react-music-collection/" }],
   }];
   const sceneData = [{
