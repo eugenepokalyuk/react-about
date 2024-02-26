@@ -23,9 +23,27 @@ const App = () => {
     books: [{ name: "Живая типографика", link: "https://awdee.ru/kniga-zhivaya-tipografika-teper-besplatna/" }],
 
   }];
-  const musicData = [{
+  const projectData = [{
     title: "Слушать хорошую музыку",
     playlist: [{ name: "Мой плейлист", link: "https://eugenepokalyuk.github.io/react-music-collection/" }],
+  }, {
+    title: "Почитать хороший блог",
+    playlist: [{ name: "Блог Nordic rose", link: "https://astro-blog-chi-seven.vercel.app/" }],
+  }, {
+    title: "Визитка очень острого соуса",
+    playlist: [{ name: "Лендинг Ujjo Hot Sauce", link: "https://ujjo-hot-sauce.vercel.app/" }],
+  }, {
+    title: "Модный интерьер",
+    playlist: [{ name: "Лендинг Inwood", link: "https://inwood-pi.vercel.app/" }],
+  }, {
+    title: "Судия дизайна Helper",
+    playlist: [
+      { name: "Портфолио дизайнера", link: "https://eugenepokalyuk.github.io/react-helper-personal-account/" },
+      { name: "Как стать дизайнером продукта", link: "https://become-designer.vercel.app/" }
+    ],
+  }, {
+    title: "Брендовые вещи домашних питомцев",
+    playlist: [{ name: "Инетрнет-магазин Pet store", link: "https://eugenepokalyuk.github.io/react-pet-store/" }],
   }];
   const sceneData = [{
     name: "HTML5",
@@ -228,7 +246,7 @@ const App = () => {
     <div className="flex flex-col md:flex-row justify-between items-start">
       <ProfileSection />
       <GreetingSection sceneData={sceneData} />
-      <CoursesSection coursesData={coursesData} booksData={booksData} musicData={musicData} />
+      <CoursesSection coursesData={coursesData} booksData={booksData} projectData={projectData} />
 
       <div className='md:hidden'>
         <Scene sceneData={sceneData} />

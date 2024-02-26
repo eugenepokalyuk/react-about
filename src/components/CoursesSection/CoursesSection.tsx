@@ -20,7 +20,7 @@ type playlist = {
     link: string;
 };
 
-interface MusicGroup {
+interface ProjectGroup {
     title: string;
     playlist: playlist[];
     // playlist: [{ name: "Живая типографика", link: "https://eugenepokalyuk.github.io/react-music-collection/" }],
@@ -29,15 +29,15 @@ interface MusicGroup {
 interface CoursesSectionProps {
     coursesData: CourseGroup[];
     booksData: BookGroup[];
-    musicData: MusicGroup[];
+    projectData: ProjectGroup[];
 }
 
-const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData, musicData }) => {
+const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData, projectData }) => {
     return (
         <section
-            className="flex flex-col p-5 h-full md:h-screen overflow-hidden md:w-[50%]"
+            className="flex flex-col p-5 h-full md:h-screen overflow-y-auto md:w-[50%]"
         >
-            <div className='max-h-full md:max-h-screen overflow-y-auto'>
+            <div className='max-h-full md:max-h-screen'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">ПРОШЁЛ КУРСЫ</div>
                     <ul className='mt-4'>
@@ -55,7 +55,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData,
                 </div>
             </div>
 
-            <div className='max-h-full md:max-h-screen overflow-y-auto mt-4'>
+            <div className='max-h-full md:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Книжки</div>
                     <ul className='mt-4'>
@@ -73,15 +73,15 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData,
                 </div>
             </div>
 
-            <div className='max-h-full md:max-h-screen overflow-y-auto mt-4'>
+            <div className='max-h-full md:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
-                    <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Интересное</div>
+                    <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Проекты</div>
                     <ul className='mt-4'>
-                        {musicData.map((musicGroup, idx) => (
+                        {projectData.map((ProjectGroup, idx) => (
                             <li key={idx} className="grid grid-cols-2 border-b border-[#d9d9d914] pb-4 mb-4 last:border-none last:mb-0 last:pb-0">
-                                <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{musicGroup.title}</h3>
+                                <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{ProjectGroup.title}</h3>
                                 <ul>
-                                    {musicGroup.playlist.map((music, musicIdx) => (
+                                    {ProjectGroup.playlist.map((music, musicIdx) => (
                                         <li key={musicIdx} className="text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline"><a href={music.link} target='_blank'>{music.name}</a></li>
                                     ))}
                                 </ul>
