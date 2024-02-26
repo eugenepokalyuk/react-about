@@ -68,19 +68,31 @@ const App = () => {
     color: "#FFFFFF",
     backgroundColor: '#E38D13'
   }, {
-    name: "NodeJS",
+    name: "Node",
     color: "#FFFFFF",
     backgroundColor: '#7CB701'
   }, {
-    name: "ExpressJS",
+    name: "Express",
     color: "#FFFFFF",
     backgroundColor: '#000000'
-  },
-  {
-    name: "Redux-thunk",
+  }, {
+    name: "Astro",
     color: "#FFFFFF",
-    backgroundColor: "#764ABC"
+    backgroundColor: "#b845ed"
+  }, {
+    name: "Alpine",
+    color: "#2c3441",
+    backgroundColor: "#72afd9"
+  }, {
+    name: "Next",
+    color: "#FFFFFF",
+    backgroundColor: "#000000"
   },
+  // {
+  //   name: "Redux-thunk",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#764ABC"
+  // },
   {
     name: "Jest",
     color: "#FFFFFF",
@@ -106,26 +118,26 @@ const App = () => {
     color: "#000000",
     backgroundColor: "#F7DF1E"
   },
-  {
-    name: "Bootstrap",
-    color: "#FFFFFF",
-    backgroundColor: "#7952B3"
-  },
-  {
-    name: "Material UI",
-    color: "#FFFFFF",
-    backgroundColor: "#0081CB"
-  },
+  // {
+  //   name: "Bootstrap",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#7952B3"
+  // },
+  // {
+  //   name: "Material UI",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#0081CB"
+  // },
   {
     name: "Git",
     color: "#FFFFFF",
     backgroundColor: "#F1502F"
   },
-  {
-    name: "SCSS",
-    color: "#FFFFFF",
-    backgroundColor: "#CD6799"
-  },
+  // {
+  //   name: "SCSS",
+  //   color: "#FFFFFF",
+  //   backgroundColor: "#CD6799"
+  // },
   // {
   //   name: "Frontend",
   //   color: "#FFFFFF",
@@ -151,26 +163,26 @@ const App = () => {
   //   color: "#FFFFFF",
   //   backgroundColor: "#009639"
   // }, 
-  {
-    name: "BEM",
-    color: "#64D544",
-    backgroundColor: '#000000'
-  },
-  {
-    name: "PostCSS",
-    color: "#FFFFFF",
-    backgroundColor: '#DD3A0A'
-  },
-  {
-    name: "Shadcn UI",
-    color: "#2D2D2D",
-    backgroundColor: '#FFD23F'
-  },
-  {
-    name: "ESLint",
-    color: "#FFFFFF",
-    backgroundColor: '#4B32C3'
-  },
+  // {
+  //   name: "BEM",
+  //   color: "#64D544",
+  //   backgroundColor: '#000000'
+  // },
+  // {
+  //   name: "PostCSS",
+  //   color: "#FFFFFF",
+  //   backgroundColor: '#DD3A0A'
+  // },
+  // {
+  //   name: "Shadcn UI",
+  //   color: "#2D2D2D",
+  //   backgroundColor: '#FFD23F'
+  // },
+  // {
+  //   name: "ESLint",
+  //   color: "#FFFFFF",
+  //   backgroundColor: '#4B32C3'
+  // },
   // {
   //   name: "npm scripts",
   //   color: "#FFFFFF",
@@ -185,6 +197,15 @@ const App = () => {
     name: "Electron",
     color: "#000000",
     backgroundColor: '#41B883'
+  },
+  {
+    name: "Radix",
+    color: "#FFFFFF",
+    backgroundColor: '#591c48'
+  }, {
+    name: "Preact",
+    color: "#FFFFFF",
+    backgroundColor: '#673ab8'
   },
     // {
     //   name: "npx",
