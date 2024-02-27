@@ -20,6 +20,7 @@ const GreetingSection: React.FC<GreetingSectionProps> = ({ sceneData }) => {
                 <h1 className='text-[28px] md:text-[48px] text-[#FFFFFF] font-[400] leading-[34px] md:leading-[56px] ibm-plex max-w-xs md:max-w-[620px]'>Привет! Меня зовут Евгений. Я занимаюсь фронтенд разработкой</h1>
             </div>
 
+
             <div className='md:hidden flex flex-col items-center mt-4'>
                 <div className="rounded-full w-16 h-16 md:w-20 md:h-20 flex justify-center items-center hover:cursor-pointer hover:brightness-[.75] hover:opacity-[95%] transition duration-300 ease-in-out">
                     <a href="https://github.com/eugenepokalyuk" target="_blank" className='relative'>
@@ -34,6 +35,12 @@ const GreetingSection: React.FC<GreetingSectionProps> = ({ sceneData }) => {
                         <IconTelegram />
                     </a>
                 </div>
+
+                {/* <div className='rounded-full w-[160px] h-16 md:w-20 md:h-20 flex justify-center items-center hover:cursor-pointer hover:brightness-[.75] hover:opacity-[95%] transition duration-300 ease-in-out'>
+                    <Link to="/projects">
+                        <button className='bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-full px-2 py-1 w-full mt-2'>Посмотреть проекты</button>
+                    </Link>
+                </div> */}
             </div>
 
             <div className='hidden md:block'>

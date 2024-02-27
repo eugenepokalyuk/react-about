@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface CourseGroup {
     title: string;
@@ -15,24 +16,27 @@ interface BookGroup {
     books: book[];
 }
 
-type playlist = {
-    name: string;
-    link: string;
-};
+// type playlist = {
+//     name: string;
+//     link: string;
+// };
 
-interface ProjectGroup {
-    title: string;
-    playlist: playlist[];
-    // playlist: [{ name: "Живая типографика", link: "https://eugenepokalyuk.github.io/react-music-collection/" }],
-}
+// interface ProjectGroup {
+//     title: string;
+//     playlist: playlist[];
+// }
 
 interface CoursesSectionProps {
     coursesData: CourseGroup[];
     booksData: BookGroup[];
-    projectData: ProjectGroup[];
+    // projectData: ProjectGroup[];
 }
 
-const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData, projectData }) => {
+const CoursesSection: React.FC<CoursesSectionProps> = ({
+    coursesData,
+    booksData,
+    // projectData 
+}) => {
     return (
         <section
             className="flex flex-col p-5 h-full md:h-screen overflow-y-auto md:w-[50%]"
@@ -73,10 +77,14 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData,
                 </div>
             </div>
 
+
             <div className='max-h-full md:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
-                    <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Проекты</div>
-                    <ul className='mt-4'>
+                    <Link to="/projects">
+                        <button className='text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 w-full mt-2'>Посмотреть проекты</button>
+                    </Link>
+                    {/* <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Проекты</div> */}
+                    {/* <ul className='mt-4'>
                         {projectData.map((ProjectGroup, idx) => (
                             <li key={idx} className="grid grid-cols-2 border-b border-[#d9d9d914] pb-4 mb-4 last:border-none last:mb-0 last:pb-0">
                                 <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{ProjectGroup.title}</h3>
@@ -87,7 +95,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({ coursesData, booksData,
                                 </ul>
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
 
