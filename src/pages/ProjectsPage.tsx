@@ -40,6 +40,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, badges, title, description }) 
 
 const ProjectsPage = () => {
     const projectArray: ProjectItemProps[] = [{
+        url: "https://skateboarding.vercel.app/",
+        badges: ["vue3", "vite", "vue-router", "tailwind", "postcss"],
+        title: "Skateboarding",
+        description: "SkateHut was established in 2007 by Mark Johansen-Berg following a family holiday to Florida with his wife and three sons. When his eldest son spotted a pair of Heelys in one of the theme parks, he just had to have a pair! Upon arriving back to the UK, they realised that Heelys were nowhere to be seen. Mark and his family decided to do something about it."
+    }, {
         url: "https://next-generate-qr.vercel.app/",
         badges: ["next", "react", "typescript", "shadcn-ui"],
         title: "Beauty QR Code Generation",
