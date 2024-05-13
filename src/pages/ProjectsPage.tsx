@@ -10,28 +10,30 @@ interface ProjectItemProps {
 
 const ProjectItem: FC<ProjectItemProps> = ({ url, badges, title, description }) => {
     return (
-        <div className="flex flex-col items-center justify-center text-center bg-[#ffffff08] p-4 rounded-[16px]">
+        <div className="flex flex-col items-start justify-start text-center bg-[#ffffff08] p-3 md:p-4 rounded-[16px]">
             <div className="flex items-center justify-center w-full">
-                <iframe src={url} frameBorder="0" className="w-full bg-white h-[20rem] " />
+                <iframe src={url} frameBorder="0" className="w-full bg-white h-[20rem] md:h-[30rem] lg:h-[20rem] rounded-t-2xl" />
             </div>
-            <div className="max-w-2xl mx-auto mb-4 text-gray-400 mt-4 w-full">
-                <h3 className="text-2xl text-left font-semibold text-gray-900 dark:text-white">{title}</h3>
-                <p className="text-justify my-4 h-[6em] overflow-auto">{description}</p>
-            </div>
-            <div className="flex justify-between w-full">
-                <div className="flex flex-wrap justify-start items-center mr-auto gap-2">
-                    {badges.map((badge) => {
-                        return (
-                            <span className="bg-black text-[#FFD600] text-xs font-medium px-2 py-1 uppercase rounded">{badge}</span>
-                        )
-                    })}
+            <div className="flex flex-col justify-between h-full w-full">
+                <div className="max-w-4xl mx-auto mb-4 text-gray-400 mt-4 w-full">
+                    <h3 className="text-2xl text-left font-semibold text-gray-900 dark:text-white">{title}</h3>
+                    <p className="text-justify my-4 h-[6em] overflow-auto">{description}</p>
                 </div>
+                <div className="flex flex-col lg:flex-row justify-between w-full">
+                    <div className="flex flex-row flex-wrap justify-start items-center mr-auto gap-2 mb-4">
+                        {badges.map((badge) => {
+                            return (
+                                <span className="bg-black text-[#FFD600] text-xs font-medium px-2 py-1 uppercase rounded">{badge}</span>
+                            )
+                        })}
+                    </div>
 
-                <div className="flex text-nowrap">
-                    <Link to={url} className="text-text">
-                        {/* Перейти на сайт */}
-                        <span className="bg-blue-900 text-blue-300 text-xs font-medium px-2 py-1 uppercase rounded hover:brightness-90">View page</span>
-                    </Link>
+                    <div className="text-nowrap">
+                        <Link to={url}>
+                            {/* Перейти на сайт */}
+                            <p className="w-full bg-blue-900 text-blue-300 text-xs font-medium px-2 py-1 uppercase rounded hover:brightness-90">View page</p>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,7 +103,7 @@ const ProjectsPage = () => {
         description: "Page about me."
     }];
     return (
-        <section className="container mx-auto p-5">
+        <section className="container mx-auto p-2 md:p-5">
             <nav>
                 <ul>
                     <li>
@@ -127,9 +129,9 @@ const ProjectsPage = () => {
             </nav>
 
             <article className="my-5">
-                <h1 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Projects</h1>
-                <p className="mt-4 text-zinc-400">Some of the projects are from work and some are on my own time.</p>
-                <div className="grid mb-8 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 gap-4 mt-4">
+                <h1 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Мои проекты</h1>
+                <p className="mt-4 text-zinc-400">Некоторые из проектов связаны с работой, а некоторые - с моим личным временем.</p>
+                <div className="grid mb-8 rounded-lg shadow-sm md:mb-12 grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
                     {projectArray.length > 0 ? (
                         <>
                             {projectArray.map((item: ProjectItemProps) => {

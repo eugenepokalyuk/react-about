@@ -6,17 +6,70 @@ import Scene from "../components/Scene/Scene";
 const HomePage = () => {
     const coursesData = [{
         title: "Practicum by Yandex",
-        courses: ["React Developer"]
+        courses: [
+            {
+                name: "React Developer",
+                link: "https://disk.yandex.ru/i/o1DRmeVlnRJDNg"
+            }
+        ]
     }, {
         title: "Free Code Camp",
-        courses: ["Front End Development Libraries", "Responsive Web Design", "JavaScript Algorithms and Data Structures"]
+        courses: [
+            {
+                name: "Front End Development Libraries",
+                link: "https://www.freecodecamp.org/certification/eugene.pokalyuk/front-end-development-libraries"
+            },
+            {
+                name: "Responsive Web Design",
+                link: "https://www.freecodecamp.org/certification/eugene.pokalyuk/responsive-web-design"
+            },
+            {
+                name: "JavaScript Algorithms and Data Structures",
+                link: "https://www.freecodecamp.org/certification/eugene.pokalyuk/javascript-algorithms-and-data-structures"
+            }
+        ]
     }, {
         title: "HTML Academy",
-        courses: ["Введение в React", "Старт в программировании", "Погружение в вёрстку", "Погружение в программирование на JavaScript", "Продвинутые техники и инструменты вёрстки", "Ретровёрстка", "Погружение в бэкенд"]
+        courses: [
+            {
+                name: "Введение в React",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            },
+            {
+                name: "Старт в программировании",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            },
+            {
+                name: "Погружение в вёрстку",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            },
+            {
+                name: "Погружение в программирование на JavaScript",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            },
+            {
+                name: "Продвинутые техники и инструменты вёрстки",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            },
+            {
+                name: "Ретровёрстка",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            },
+            {
+                name: "Погружение в бэкенд",
+                link: "https://htmlacademy.ru/profile/eugenepokalyuk"
+            }
+        ]
     }, {
         title: "Skillbox",
-        courses: ["Веб-верстка «Базовый уровень», «Продвинутый уровень»", "JavaScript «Базовый уровень», «Продвинутый уровень»", "Node.js"]
+        courses: [
+            {
+                name: '"Веб-верстка «Базовый уровень», «Продвинутый уровень»", "JavaScript «Базовый уровень», «Продвинутый уровень»", "Node.js"',
+                link: "#"
+            }
+        ]
     }];
+
     const booksData = [{
         title: "Александра Королькова",
         books: [{ name: "Живая типографика", description: "В книге живым и доступным языком изложены основные правила и закономерности типографики—«искусства расположения наборного материала на плоскости листа»", link: "https://awdee.ru/kniga-zhivaya-tipografika-teper-besplatna/" }],
@@ -33,6 +86,7 @@ const HomePage = () => {
             { name: "Grid Garden", description: "Место, где вы напишете CSS-код, чтобы вырастить морковный сад", link: "https://cssgridgarden.com/" }
         ],
     }];
+
     const sceneData = [{
         name: "HTML5",
         color: "#FFF",
@@ -229,34 +283,6 @@ const HomePage = () => {
         //   backgroundColor: '#61C911'
         // }
     ];
-    // const projectData = [{
-    //     title: "Слушать хорошую музыку",
-    //     description: "",
-    //     playlist: [{ name: "Мой плейлист", link: "https://eugenepokalyuk.github.io/react-music-collection/" }],
-    // }, {
-    //     title: "Почитать хороший блог",
-    //     description: "",
-    //     playlist: [{ name: "Блог Nordic rose", link: "https://astro-blog-chi-seven.vercel.app/" }],
-    // }, {
-    //     title: "Визитка очень острого соуса",
-    //     description: "",
-    //     playlist: [{ name: "Лендинг Ujjo Hot Sauce", link: "https://ujjo-hot-sauce.vercel.app/" }],
-    // }, {
-    //     title: "Модный интерьер",
-    //     description: "",
-    //     playlist: [{ name: "Лендинг Inwood", link: "https://inwood-pi.vercel.app/" }],
-    // }, {
-    //     title: "Судия дизайна Helper",
-    //     description: "",
-    //     playlist: [
-    //         { name: "Портфолио дизайнера", link: "https://eugenepokalyuk.github.io/react-helper-personal-account/" },
-    //         { name: "Как стать дизайнером продукта", link: "https://become-designer.vercel.app/" }
-    //     ],
-    // }, {
-    //     title: "Брендовые вещи домашних питомцев",
-    //     description: "",
-    //     playlist: [{ name: "Инетрнет-магазин Pet store", link: "https://eugenepokalyuk.github.io/react-pet-store/" }],
-    // }];
     return (
         <div className="flex flex-col md:flex-row justify-between items-start">
             <ProfileSection />
