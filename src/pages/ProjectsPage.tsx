@@ -12,10 +12,10 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, badges, title, description }) 
     return (
         <div className="flex flex-col items-start justify-start text-center bg-[#ffffff08] p-3 md:p-4 rounded-[16px]">
             <div className="flex items-center justify-center w-full">
-                <iframe src={url} frameBorder="0" className="w-full bg-white h-[20rem] md:h-[30rem] lg:h-[20rem] rounded-t-2xl" />
+                <iframe src={url} frameBorder="0" className="w-full bg-white h-[20rem] md:h-[30rem] xl:h-[40rem] rounded-t-2xl" />
             </div>
             <div className="flex flex-col justify-between h-full w-full">
-                <div className="max-w-4xl mx-auto mb-4 text-gray-400 mt-4 w-full">
+                <div className="mx-auto mb-4 text-gray-400 mt-4 w-full">
                     <h3 className="text-2xl text-left font-semibold text-gray-900 dark:text-white">{title}</h3>
                     <p className="text-justify my-4 h-[6em] overflow-auto">{description}</p>
                 </div>
@@ -42,6 +42,26 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, badges, title, description }) 
 
 const ProjectsPage = () => {
     const projectArray: ProjectItemProps[] = [{
+        url: "https://eugenepokalyuk.github.io/static-helper-garantiya/",
+        badges: ["html", "css", "javascript"],
+        title: "Helper Garantiya",
+        description: ""
+    },{
+        url: "https://eugenepokalyuk.github.io/static-helper-main-page/",
+        badges: ["html", "css", "javascript"],
+        title: "Helper Main Page",
+        description: ""
+    }, {
+        url: "https://react-iway.vercel.app/",
+        badges: ["react", "router v6", "vite", "redux", "typescript", "scss", "antd"],
+        title: "I Way",
+        description: "The Trips Management System is a React-based web application designed to manage and display trip details. It includes features such as trip listing, detailed trip views, search and filtering capabilities, and pagination. The application leverages Ant Design for UI components and integrates with a Redux store for state management."
+    }, {
+        url: "https://next-aceplace.vercel.app/",
+        badges: ["react", "typescript", "next", "ssr", "dadata"],
+        title: "Ace Place",
+        description: "This project is a Next application that allows users to search for organizations by their tax identification number (INN) and display detailed information about the organization. The data is fetched from the DaData API."
+    }, {
         url: "https://skateboarding.vercel.app/",
         badges: ["vue3", "vite", "vue-router", "tailwind", "postcss"],
         title: "Skateboarding",
@@ -131,7 +151,7 @@ const ProjectsPage = () => {
             <article className="my-5">
                 <h1 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Мои проекты</h1>
                 <p className="mt-4 text-zinc-400">Некоторые из проектов связаны с работой, а некоторые - с моим личным временем.</p>
-                <div className="grid mb-8 rounded-lg shadow-sm md:mb-12 grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+                <div className="grid mb-8 rounded-lg shadow-sm md:mb-12 grid-cols-1 gap-4 mt-4">
                     {projectArray.length > 0 ? (
                         <>
                             {projectArray.map((item: ProjectItemProps) => {
