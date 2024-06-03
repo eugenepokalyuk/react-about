@@ -39,11 +39,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
             </div>
             <div className="flex flex-col justify-between h-full w-full">
                 <div className="mx-auto mb-4 text-gray-400 mt-4 w-full">
-                    <h3 className="als-gorizont text-3xl -tracking-[0.06em] font-black text-zinc-100 text-left">{title}</h3>
-                    <p className="als-gorizont text-xl font-medium leading-6 text-zinc-400 text-justify my-4 overflow-auto">{description}</p>
+                    <h3 className="als-gorizont text-lg md:text-3xl -tracking-[0.06em] font-black text-zinc-100 text-left">{title}</h3>
+                    <p className="als-gorizont text-sm md:text-xl font-medium leading-6 text-zinc-400 text-left overflow-auto">{description}</p>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between w-full">
-                    <div className="flex flex-row flex-wrap justify-start items-center mr-auto gap-2 mb-4 w-4/12">
+                    <div className="flex flex-row flex-wrap justify-start items-center mr-auto gap-2 mb-4 w-full xl:w-4/12">
                         {badges.map((badge) => {
                             return (
                                 <span className="als-gorizont bg-black text-[#FFD600] text-xs font-medium px-2 py-1 uppercase rounded">{badge}</span>
@@ -51,7 +51,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
                         })}
                     </div>
 
-                    <div className="flex flex-row gap-x-2">
+                    <div className="flex flex-row justify-end items-end gap-x-2">
                         <div className="text-nowrap">
                             <Link to={url} target="_blank" className="h-full">
                                 <p className="als-gorizont w-full bg-[#FFD600] text-black text-xs font-medium px-2 py-1 uppercase rounded hover:brightness-90">Поглядеть</p>
@@ -244,9 +244,8 @@ const ProjectsPage = () => {
 
             <article className="space-y-10 my-5">
                 <div>
-                    <h1 className="als-gorizont text-[90px] -tracking-[0.06em] font-black text-zinc-100">Мои проекты</h1>
-
-                    <p className="als-gorizont text-xl font-medium leading-6 text-zinc-400">Некоторые из проектов связаны с работой, <br /> а некоторые - с моим личным временем.</p>
+                    <h1 className="als-gorizont text-3xl md:text-[90px] md:leading-[100px] -tracking-[0.06em] font-black text-zinc-100">Мои проекты</h1>
+                    <p className="als-gorizont text-lg md:text-xl font-medium md:leading-6 text-zinc-400">Некоторые из проектов связаны с работой, <br /> а некоторые - с моим личным временем.</p>
                 </div>
 
                 <div>
@@ -279,48 +278,6 @@ const ProjectsPage = () => {
 
             </article>
         </section>
-        // <section className="container mx-auto p-2 md:p-5">
-        //     <nav>
-        //         <Link to="/">
-        //             <button
-        //                 className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
-        //                 <svg
-        //                     xmlns="http://www.w3.org/2000/svg"
-        //                     height="24"
-        //                     viewBox="0 -960 960 960"
-        //                     width="24"
-        //                     className="scale-[75%]"
-        //                 >
-        //                     <path
-        //                         d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"
-        //                     />
-        //                 </svg>
-        //                 Вернуться на главную страницу
-        //             </button>
-        //         </Link>
-        //     </nav>
-
-        //     <article className="my-5">
-        //         <div>
-        //             <h1 className="als-gorizont text-[90px] -tracking-[0.06em] font-black text-zinc-100">Мои проекты</h1>
-
-        //             <p className="als-gorizont text-xl font-medium leading-6 text-zinc-400">Некоторые из проектов связаны с работой, <br /> а некоторые - с моим личным временем.</p>
-        //         </div>
-        //         <div className="grid mb-8 rounded-lg shadow-sm md:mb-12 grid-cols-1 gap-4 mt-4">
-        //             {projectArray.length > 0 ? (
-        //                 <>
-        //                     {projectArray.map((item: ProjectItemProps) => {
-        //                         return (
-        //                             <ProjectItem {...item} />
-        //                         )
-        //                     })}
-        //                 </>
-        //             ) : (
-        //                 <p className="mt-4 text-zinc-400">К сожалению, я еще не сделал никакой проект</p>
-        //             )}
-        //         </div>
-        //     </article>
-        // </section>
     )
 }
 export default ProjectsPage;
