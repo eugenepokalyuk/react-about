@@ -87,7 +87,7 @@ const ProjectsPage = () => {
         }, {
             url: "https://react-pryaniky.vercel.app/",
             urlGitHub: "https://github.com/eugenepokalyuk/react-pryaniky",
-            badges: ["React", "TypeScript", "React Router v6", "Redux", "Redux Saga", "Material UI"],
+            badges: ["React", "TypeScript", "React Router v6", "Redux", "Redux Saga", "Material UI", "Formik"],
             title: "Pryaniky SPA",
             description: "The application is a secure one-page web application that provides CRUD operations (create, read, update, delete) on data stored on the server"
         }, {
