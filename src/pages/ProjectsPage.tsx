@@ -213,6 +213,12 @@ const ProjectsPage = () => {
             title: "Real Estate",
             description: "The landing page of a company specializing in the exterior of real estate is a modern and intuitive web interface created on React. The main page focuses on the company's portfolio of projects, showing high-quality images and descriptions of implemented exterior solutions for various types of real estate"
         }, {
+            url: "https://eugenepokalyuk.github.io/react-burger/",
+            urlGitHub: "https://github.com/eugenepokalyuk/react-burger",
+            badges: ["React", "TypeScript", "Redux", "jest", "websocket", "cypress"],
+            title: "Stellar Burger",
+            description: "The web application allows you to order unique burgers of your own assembly. The burgers are created by dragging and dropping ingredients into the burger builder area and placing an order, information on ingredients can be opened by clicking on an item, all orders are tracked in real time, you can view the history of all orders in the order feed."
+        },{
             url: "https://eugenepokalyuk.github.io/react-about/",
             urlGitHub: "https://github.com/eugenepokalyuk/react-about",
             badges: ["React", "TypeScript", "Tailwind"],
