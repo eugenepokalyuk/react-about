@@ -73,6 +73,13 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
 const ProjectsPage = () => {
     const projectArray: ProjectItemProps[] = [
         {
+            url: "https://react-crafttech.vercel.app/",
+            urlGitHub: "https://github.com/eugenepokalyuk/react-crafttech",
+            badges: ["React", "TypeScript", "sass", "konva"],
+            title: "Web Paint",
+            description: "Это приложение, предоставляет собой бесконечный холст, на котором пользователь может добавлять фигуры и манипулировать ими. Также есть возможность отмены действий в обе стороны и изменение заднего фона."
+        },
+        {
             url: "https://react-madsoft.vercel.app/",
             urlGitHub: "https://github.com/eugenepokalyuk/react-madsoft",
             badges: ["React", "TypeScript", "Redux", "Tailwind", "Formik"],
