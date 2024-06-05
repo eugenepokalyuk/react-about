@@ -36,30 +36,19 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
             className="flex flex-col p-2 md:p-5 h-full md:h-screen overflow-y-auto md:w-[50%]"
         >
             <div className='max-h-full md:max-h-screen mt-4'>
-                <div className='bg-[#ffffff08] rounded-[16px] p-6'>
-                    <div className="pb-4 mb-4 text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] eb-garamond">
+                <Link to="/projects">
+                    <div className='bg-[#FFD600] rounded-[16px] p-6 text-[20px] italic font-[400] leading-[22px] -tracking-[0.06em] text-center als-gorizont hover:bg-[#ffc100]'>
                         Мои проекты
                     </div>
+                </Link>
+            </div>
 
-                    <div>
-                        <Link to="/projects">
-                            <button className='flex items-center bg-[#ffffff08] justify-center hover:cursor-pointer text-[#FFD600] hover:underline rounded-md px-2 py-1 w-full mt-2'>
-                                <span className='text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond'>Перейти на страницу с проектами</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="24"
-                                    viewBox="0 -960 960 960"
-                                    width="24"
-                                    className="rotate-180 scale-[75%] fill-[#FFD600]"
-                                >
-                                    <path
-                                        d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"
-                                    />
-                                </svg>
-                            </button>
-                        </Link>
+            <div className='max-h-full md:max-h-screen mt-4'>
+                <Link to="/about">
+                    <div className='bg-[#FFD600] rounded-[16px] p-6 text-[20px] italic font-[400] leading-[22px] -tracking-[0.06em] text-center als-gorizont hover:bg-[#ffc100]'>
+                        Самопрезентация
                     </div>
-                </div>
+                </Link>
             </div>
 
             <div className='max-h-full md:max-h-screen mt-4'>

@@ -20,23 +20,11 @@ html {
     font-family: "ALS Gorizont Expanded Regular";
 }
 
-/* .russo-one {
-    font-family: "Russo One", sans-serif;
-    font-style: normal;
-  }
-
-.gothic-one {
-    font-family: "Dela Gothic One", sans-serif;
-    font-style: normal;
-} */
-
-/* 400-800 */
 .eb-garamond {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
 }
 
-/* 100-700 */
 .ibm-plex {
     font-family: "IBM Plex Mono", monospace;
 }
@@ -49,3 +37,75 @@ html {
 * {
     scrollbar-width: none;
 }
+
+.stack-underline {
+    position: relative;
+    display: inline-block;
+    color: #ccc;
+}
+
+.stack-underline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100%;
+    height: 14px;
+    transform: skew(-12deg) translateX(-50%);
+    background: #ff000030;
+    z-index: -1;
+}
+
+.team-underline {
+    position: relative;
+    display: inline-block;
+    color: #ccc;
+}
+
+.team-underline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100%;
+    height: 14px;
+    transform: skew(-12deg) translateX(-50%);
+    background: #0073ff80;
+    z-index: -1;
+}
+
+.cat-underline {
+    position: relative;
+    display: inline-block;
+    color: #ccc;
+}
+
+.cat-underline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100%;
+    height: 14px;
+    transform: skew(-12deg) translateX(-50%);
+    background: #ff800080;
+    z-index: -1;
+}
+
+.surfing-underline {
+    position: relative;
+    display: inline-block;
+    color: #ccc;
+}
+
+.surfing-underline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100%;
+    height: 14px;
+    transform: skew(-12deg) translateX(-50%);
+    background: #57b7ee80;
+    z-index: -1;
+  }

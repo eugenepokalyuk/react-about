@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { Link } from "react-router-dom";
+import NavigateBar from "../components/NavigateBar/NavigateBar";
 
 interface ProjectItemProps {
     url: string,
@@ -18,7 +19,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
     });
 
     return (
-        <div ref={ref} className={`transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-0'} flex flex-col items-start justify-start text-center bg-[#ffffff08] p-3 md:p-4 rounded-[16px]`}>
+        <div ref={ref} className={`transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-10'} flex flex-col items-start justify-start text-center bg-[#ffffff08] p-3 md:p-4 rounded-[16px]`}>
             <div className="flex items-center justify-center w-full">
                 {img
                     ? (
@@ -218,7 +219,7 @@ const ProjectsPage = () => {
             badges: ["React", "TypeScript", "Redux", "jest", "websocket", "cypress"],
             title: "Stellar Burger",
             description: "The web application allows you to order unique burgers of your own assembly. The burgers are created by dragging and dropping ingredients into the burger builder area and placing an order, information on ingredients can be opened by clicking on an item, all orders are tracked in real time, you can view the history of all orders in the order feed."
-        },{
+        }, {
             url: "https://eugenepokalyuk.github.io/react-about/",
             urlGitHub: "https://github.com/eugenepokalyuk/react-about",
             badges: ["React", "TypeScript", "Tailwind"],
@@ -235,25 +236,7 @@ const ProjectsPage = () => {
 
     return (
         <section className="container mx-auto p-2 md:p-5">
-            <nav>
-                <Link to="/">
-                    <button
-                        className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24"
-                            viewBox="0 -960 960 960"
-                            width="24"
-                            className="scale-[75%]"
-                        >
-                            <path
-                                d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"
-                            />
-                        </svg>
-                        Вернуться на главную страницу
-                    </button>
-                </Link>
-            </nav>
+            <NavigateBar />
 
             <article className="space-y-10 my-5">
                 <div>
