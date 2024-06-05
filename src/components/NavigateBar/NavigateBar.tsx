@@ -25,7 +25,7 @@ const NavigateBar = () => {
             </Link>
 
             {location.pathname !== PROJECTS_PATH && (
-                <Link to={PROJECTS_PATH}>
+                <Link to={PROJECTS_PATH} className="hidden xl:block">
                     <button
                         className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
                         Мои проекты
@@ -34,7 +34,7 @@ const NavigateBar = () => {
             )}
 
             {location.pathname !== ABOUT_PATH && (
-                <Link to={ABOUT_PATH}>
+                <Link to={ABOUT_PATH} className="hidden xl:block">
                     <button
                         className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
                         Самопрезентация
