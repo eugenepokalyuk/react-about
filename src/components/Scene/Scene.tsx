@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Matter from 'matter-js';
 import { FC, useEffect, useRef } from 'react';
 
@@ -12,12 +13,18 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
     const boxRef: any = useRef();
     const engineRef: any = useRef();
 
-    const ifMobile = (x: any, y: any) => {
-        return (window.innerWidth <= 768 ? x : y)
+    const tabletSize = 1024;
+
+    const ifMobileW = (x: any, y: any) => {
+        return (window.innerWidth <= tabletSize ? x : y)
     }
 
-    const CANVAS_WIDTH = ifMobile(window.innerWidth, (window.innerWidth * 0.6))
-    const CANVAS_HEIGHT = ifMobile((window.innerHeight - 100), window.innerHeight)
+    const ifMobileH = (x: any, y: any) => {
+        return (window.innerHeight <= tabletSize ? x : y)
+    }
+
+    const CANVAS_WIDTH = ifMobileW(window.innerWidth, (window.innerWidth - 700))
+    const CANVAS_HEIGHT = ifMobileH((window.innerHeight - 200), window.innerHeight)
 
     useEffect(() => {
         engineRef.current = Matter.Engine.create();
@@ -34,13 +41,13 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
         });
 
         const context = render.context;
-        context.font = ifMobile('16px IBM Plex Mono', '30px IBM Plex Mono');
+        context.font = ifMobileW('16px IBM Plex Mono', '28px IBM Plex Mono');
 
         const randomInRange = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
         const figures = sceneData.map((item) => {
             const textSize = context.measureText(item.name);
-            const textWidth = ifMobile((textSize.width + 50), (textSize.width + 60)); // 8px padding с каждой стороны
+            const textWidth = ifMobileW((textSize.width + 50), (textSize.width + 60)); // 8px padding с каждой стороны
             // const textWidth = textSize.width + 50;
             const textHeight = 60;
             // const textHeight = ifMobile(60, 60); // Высота текста + padding
@@ -162,8 +169,7 @@ const Scene: FC<SceneProps> = ({ sceneData }) => {
     }, [sceneData]);
 
     return (
-        // 
-        <div id="skillbox" ref={boxRef} className={`${window.innerWidth <= 768 ? '' : 'absolute bottom-0 '} flex justify-start items-center z-10`}></div>
+        <div id="skillbox" ref={boxRef} className={`${window.innerWidth <= tabletSize ? '' : 'absolute bottom-0 '} flex justify-start items-center z-10`}></div>
     )
 };
 

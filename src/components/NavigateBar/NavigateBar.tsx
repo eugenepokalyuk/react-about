@@ -6,9 +6,9 @@ const NavigateBar = () => {
 
     return (
         <nav className="flex flex-row gap-x-4">
-            <Link to="/">
+            <Link to="/" className="w-full md:w-auto">
                 <button
-                    className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
+                    className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2 w-full md:w-auto'>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="24"
@@ -25,7 +25,7 @@ const NavigateBar = () => {
             </Link>
 
             {location.pathname !== PROJECTS_PATH && (
-                <Link to={PROJECTS_PATH} className="hidden xl:block">
+                <Link to={PROJECTS_PATH} className="hidden md:block">
                     <button
                         className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
                         Мои проекты
@@ -34,7 +34,7 @@ const NavigateBar = () => {
             )}
 
             {location.pathname !== ABOUT_PATH && (
-                <Link to={ABOUT_PATH} className="hidden xl:block">
+                <Link to={ABOUT_PATH} className="hidden md:block">
                     <button
                         className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
                         Самопрезентация

@@ -33,9 +33,9 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
 }) => {
     return (
         <section
-            className="flex flex-col p-2 md:p-5 h-full md:h-screen overflow-y-auto md:w-[50%]"
+            className="flex flex-col p-2 xl:p-5 h-full xl:h-screen overflow-y-auto xl:w-[750px]"
         >
-            <div className='max-h-full md:max-h-screen mt-4'>
+            <div className='max-h-full xl:max-h-screen mt-4'>
                 <Link to="/projects">
                     <div className='bg-[#FFD600] rounded-[16px] p-6 text-[20px] italic font-[400] leading-[22px] -tracking-[0.06em] text-center als-gorizont hover:bg-[#ffc100]'>
                         Мои проекты
@@ -43,7 +43,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                 </Link>
             </div>
 
-            <div className='max-h-full md:max-h-screen mt-4'>
+            <div className='max-h-full xl:max-h-screen mt-4'>
                 <Link to="/about">
                     <div className='bg-[#FFD600] rounded-[16px] p-6 text-[20px] italic font-[400] leading-[22px] -tracking-[0.06em] text-center als-gorizont hover:bg-[#ffc100]'>
                         Самопрезентация
@@ -51,7 +51,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                 </Link>
             </div>
 
-            <div className='max-h-full md:max-h-screen mt-4'>
+            <div className='max-h-full xl:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Прошел курсы</div>
                     <ul className='mt-4'>
@@ -71,7 +71,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                 </div>
             </div>
 
-            <div className='max-h-full md:max-h-screen mt-4'>
+            <div className='max-h-full xl:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Полезное</div>
                     <ul className='mt-4'>

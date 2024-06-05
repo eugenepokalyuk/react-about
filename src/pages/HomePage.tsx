@@ -284,13 +284,13 @@ const HomePage = () => {
         // }
     ];
     return (
-        <div className="flex flex-col md:flex-row justify-between items-start">
+        <div className="flex flex-col xl:flex-row justify-between items-start">
             <ProfileSection />
             <GreetingSection sceneData={sceneData} />
             {/* projectData={projectData} */}
             <CoursesSection coursesData={coursesData} booksData={booksData} />
 
-            <div className='md:hidden'>
+            <div className='xl:hidden'>
                 <Scene sceneData={sceneData} />
             </div>
         </div>
