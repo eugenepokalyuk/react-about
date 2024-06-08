@@ -74,6 +74,12 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
 const ProjectsPage = () => {
     const projectArray: ProjectItemProps[] = [
         {
+            url: "https://react-skilla.vercel.app/",
+            urlGitHub: "https://github.com/eugenepokalyuk/react-skilla",
+            badges: ["React", "TypeScript", "Redux", "Date-fns", "SCSS"],
+            title: "Call Management System",
+            description: "This project is a call management system built using React and TypeScript. It provides an interface to display, filter and interact with call records."
+        }, {
             url: "https://react-mindbox-pied.vercel.app/",
             urlGitHub: "https://github.com/eugenepokalyuk/react-mindbox",
             badges: ["React", "TypeScript", "Tailwind", "Jest"],
