@@ -12,7 +12,7 @@ const ProfileSection: React.FC = () => {
 
             <div className='flex flex-col items-center space-y-4'>
                 <div className="rounded-full w-16 h-16 xl:w-20 xl:h-20 flex justify-center items-center hover:cursor-pointer hover:brightness-[.75] hover:opacity-[95%] transition duration-300 ease-in-out">
-                    <a href="https://t.me/PaperCranejs" target="_blank">
+                    <a href="https://t.me/wazzupjohnny" target="_blank">
                         <IconTelegram />
                     </a>
                 </div>
