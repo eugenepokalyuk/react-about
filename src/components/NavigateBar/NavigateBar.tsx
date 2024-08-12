@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+
 import { ABOUT_PATH, PROJECTS_PATH } from "../../utils/routePath";
 
 const NavigateBar = () => {
