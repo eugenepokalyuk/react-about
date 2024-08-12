@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 type course = {
@@ -27,7 +27,7 @@ interface CoursesSectionProps {
     booksData: BookGroup[];
 }
 
-const CoursesSection: React.FC<CoursesSectionProps> = ({
+const CoursesSection: FC<CoursesSectionProps> = ({
     coursesData,
     booksData,
 }) => {
@@ -54,10 +54,12 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
             <div className='max-h-full xl:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Прошел курсы</div>
+                    
                     <ul className='mt-4'>
                         {coursesData.map((courseGroup, idx) => (
                             <li key={idx} className="grid grid-cols-2 border-b border-[#d9d9d914] pb-4 mb-4 last:border-none last:mb-0 last:pb-0">
                                 <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{courseGroup.title}</h3>
+                                
                                 <ul>
                                     {courseGroup.courses.map((course, courseIdx: number) => (
                                         <a href={course.link ? course.link : "#"} key={courseIdx} target='_blank'>
@@ -74,10 +76,12 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
             <div className='max-h-full xl:max-h-screen mt-4'>
                 <div className='bg-[#ffffff08] rounded-[16px] p-6'>
                     <div className="text-[#FFFFFF] text-[16px] italic font-[400] leading-[22px] tracking-[1.6px] text-center border-b border-[#d9d9d914] pb-4 mb-4 eb-garamond">Полезное</div>
+                    
                     <ul className='mt-4'>
                         {booksData.map((bookGroup, idx) => (
                             <li key={idx} className="grid grid-cols-2 border-b border-[#d9d9d914] pb-4 mb-4 last:border-none last:mb-0 last:pb-0">
                                 <h3 className="text-[#ffffff3d] text-[16px] italic font-[400] leading-[22px] eb-garamond">{bookGroup.title}</h3>
+                                
                                 <ul>
                                     {bookGroup.books.map((book, bookIdx) => (
                                         <>
@@ -91,7 +95,6 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                     </ul>
                 </div>
             </div>
-
         </section>
     );
 };
