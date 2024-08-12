@@ -1,7 +1,10 @@
+import { FC } from 'react';
+
 import Avatar from '../../assets/avatar.png';
+import Scene from "../Scene/Scene";
 import { ReactComponent as IconGitHub } from '../../assets/icon-mobile-github.svg';
 import { ReactComponent as IconTelegram } from '../../assets/icon-mobile-telegram.svg';
-import Scene from "../Scene/Scene";
+
 interface SceneGroup {
     name: string,
     color: string,
@@ -12,7 +15,7 @@ interface GreetingSectionProps {
     sceneData: SceneGroup[];
 }
 
-const GreetingSection: React.FC<GreetingSectionProps> = ({ sceneData }) => {
+const GreetingSection: FC<GreetingSectionProps> = ({ sceneData }) => {
     return (
         <section className="flex flex-col justify-between h-full xl:h-screen w-full p-5 pb-0">
             <div className='flex space-x-[36px]'>
@@ -35,12 +38,6 @@ const GreetingSection: React.FC<GreetingSectionProps> = ({ sceneData }) => {
                         <IconTelegram />
                     </a>
                 </div>
-
-                {/* <div className='rounded-full w-[160px] h-16 xl:w-20 xl:h-20 flex justify-center items-center hover:cursor-pointer hover:brightness-[.75] hover:opacity-[95%] transition duration-300 ease-in-out'>
-                    <Link to="/projects">
-                        <button className='bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-full px-2 py-1 w-full mt-2'>Посмотреть проекты</button>
-                    </Link>
-                </div> */}
             </div>
 
             <div className='hidden xl:block'>
