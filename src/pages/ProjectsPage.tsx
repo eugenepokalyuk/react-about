@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
-import { useInView } from 'react-intersection-observer';
 import { Link } from "react-router-dom";
+import { useInView } from 'react-intersection-observer';
+
 import NavigateBar from "../components/NavigateBar/NavigateBar";
 
 interface ProjectItemProps {
@@ -36,13 +37,15 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
                         />
                     )
                 }
-
             </div>
+            
             <div className="flex flex-col justify-between h-full w-full">
                 <div className="mx-auto mb-4 text-gray-400 mt-4 w-full">
                     <h3 className="als-gorizont text-lg xl:text-3xl -tracking-[0.06em] font-black text-zinc-100 text-left">{title}</h3>
+                
                     <p className="als-gorizont text-sm xl:text-xl font-medium leading-6 text-zinc-400 text-left overflow-auto">{description}</p>
                 </div>
+            
                 <div className="flex flex-col lg:flex-row justify-between w-full">
                     <div className="flex flex-row flex-wrap justify-start items-center mr-auto gap-2 mb-4 w-full xl:w-4/12">
                         {badges.map((badge) => {
@@ -239,6 +242,7 @@ const ProjectsPage = () => {
         }];
 
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
+    
     const allTags = Array.from(new Set(projectArray.flatMap(project => project.badges)));
 
     const filteredProjects = selectedTag
@@ -252,11 +256,13 @@ const ProjectsPage = () => {
             <article className="space-y-10 my-5">
                 <div>
                     <h1 className="als-gorizont text-3xl xl:text-[90px] xl:leading-[100px] -tracking-[0.06em] font-black text-zinc-100">Мои проекты</h1>
+                    
                     <p className="als-gorizont text-lg xl:text-xl font-medium xl:leading-6 text-zinc-400">Некоторые из проектов связаны с работой, <br /> а некоторые - с моим личным временем.</p>
                 </div>
 
                 <div>
                     <h2 className="als-gorizont text-2xl font-bold text-zinc-100">Фильтр по тегам:</h2>
+                    
                     <div className="flex flex-wrap mt-2">
                         {allTags.map((tag, index) => (
                             <button
@@ -287,4 +293,5 @@ const ProjectsPage = () => {
         </section>
     )
 }
+
 export default ProjectsPage;
