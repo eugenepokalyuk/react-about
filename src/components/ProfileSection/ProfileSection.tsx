@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
+
 import Avatar from '../../assets/avatar.png';
 import { ReactComponent as IconGitHub } from '../../assets/icon-github.svg';
 import { ReactComponent as IconTelegram } from '../../assets/icon-telegram.svg';
 
-const ProfileSection: React.FC = () => {
+const ProfileSection: FC = () => {
     return (
         <section className="max-xl:hidden flex flex-col items-center justify-between h-full xl:h-screen space-y-4 p-5">
             <div>
