@@ -1,25 +1,28 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import {Route, Routes, useLocation} from 'react-router-dom';
 
 import './App.css';
-import AboutPage from '../../pages/AboutPage';
-import ErrorPage from '../../pages/ErrorPage';
-import HomePage from '../../pages/HomePage';
-import ProjectsPage from '../../pages/ProjectsPage';
-import { ABOUT_PATH, DEFAULT_PATH, ERROR_PATH, PROJECTS_PATH } from '../../utils/routePath';
+import {AboutPage} from '../../pages/AboutPage';
+import {ErrorPage} from '../../pages/ErrorPage';
+import {HomePage} from '../../pages/HomePage';
+import {ProjectsPage} from '../../pages/ProjectsPage';
+import {Urls} from '../../utils/routePath';
 
 const App = () => {
-  const location = useLocation();
-  
-  const background = location.state && location.state.background;
+    const location = useLocation();
 
-  return (
-    <Routes location={background || location}>
-      <Route path={DEFAULT_PATH} element={<HomePage />} />
-      <Route path={PROJECTS_PATH} element={<ProjectsPage />} />
-      <Route path={ABOUT_PATH} element={<AboutPage />} />
-      <Route path={ERROR_PATH} element={<ErrorPage />} />
-    </Routes>
-  )
+    const background = location.state && location.state.background;
+
+    return (
+        <Routes location={background || location}>
+            <Route path={Urls.Home} element={<HomePage/>}/>
+
+            <Route path={Urls.Projects} element={<ProjectsPage/>}/>
+
+            <Route path={Urls.About} element={<AboutPage/>}/>
+
+            <Route path={Urls.Error} element={<ErrorPage/>}/>
+        </Routes>
+    )
 }
 
 export default App

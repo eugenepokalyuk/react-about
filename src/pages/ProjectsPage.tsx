@@ -1,26 +1,27 @@
-import { FC, useState } from "react";
-import { Link } from "react-router-dom";
-import { useInView } from 'react-intersection-observer';
+import {FC, useState} from "react";
+import {Link} from "react-router-dom";
+import {useInView} from 'react-intersection-observer';
 
 import NavigateBar from "../components/NavigateBar/NavigateBar";
 
 interface ProjectItemProps {
-    url: string,
-    urlGitHub: string,
-    img?: string,
-    badges: string[],
-    title: string,
-    description: string
+    url:string,
+    urlGitHub:string,
+    img?:string,
+    badges:string[],
+    title:string,
+    description:string
 }
 
-const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title, description }) => {
+const ProjectItem:FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title, description }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1
     });
 
     return (
-        <div ref={ref} className={`transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-10'} flex flex-col items-start justify-start text-center bg-[#ffffff08] p-3 xl:p-4 rounded-[16px]`}>
+        <div ref={ref}
+             className={`transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-10'} flex flex-col items-start justify-start text-center bg-[#ffffff08] p-3 xl:p-4 rounded-[16px]`}>
             <div className="flex items-center justify-center w-full">
                 {img
                     ? (
@@ -30,27 +31,29 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
                             className="w-full bg-white h-[20rem] xl:h-[30rem] xl:h-[40rem] rounded-t-2xl"
                         />
                     ) : url && (
-                        <iframe
-                            frameBorder="0"
-                            src={url}
-                            className="w-full bg-white h-[20rem] xl:h-[30rem] xl:h-[40rem] rounded-t-2xl"
-                        />
-                    )
+                    <iframe
+                        frameBorder="0"
+                        src={url}
+                        className="w-full bg-white h-[20rem] xl:h-[30rem] xl:h-[40rem] rounded-t-2xl"
+                    />
+                )
                 }
             </div>
-            
+
             <div className="flex flex-col justify-between h-full w-full">
                 <div className="mx-auto mb-4 text-gray-400 mt-4 w-full">
                     <h3 className="als-gorizont text-lg xl:text-3xl -tracking-[0.06em] font-black text-zinc-100 text-left">{title}</h3>
-                
+
                     <p className="als-gorizont text-sm xl:text-xl font-medium leading-6 text-zinc-400 text-left overflow-auto">{description}</p>
                 </div>
-            
+
                 <div className="flex flex-col lg:flex-row justify-between w-full">
-                    <div className="flex flex-row flex-wrap justify-start items-center mr-auto gap-2 mb-4 w-full xl:w-4/12">
+                    <div
+                        className="flex flex-row flex-wrap justify-start items-center mr-auto gap-2 mb-4 w-full xl:w-4/12">
                         {badges.map((badge) => {
                             return (
-                                <span className="als-gorizont bg-black text-[#FFD600] text-xs font-medium px-2 py-1 uppercase rounded">{badge}</span>
+                                <span
+                                    className="als-gorizont bg-black text-[#FFD600] text-xs font-medium px-2 py-1 uppercase rounded">{badge}</span>
                             )
                         })}
                     </div>
@@ -74,8 +77,8 @@ const ProjectItem: FC<ProjectItemProps> = ({ url, urlGitHub, img, badges, title,
     )
 };
 
-const ProjectsPage = () => {
-    const projectArray: ProjectItemProps[] = [
+export const ProjectsPage = () => {
+    const projectArray:ProjectItemProps[] = [
         {
             url: "https://react-skilla.vercel.app/",
             urlGitHub: "https://github.com/eugenepokalyuk/react-skilla",
@@ -241,8 +244,8 @@ const ProjectsPage = () => {
             description: "Page about me."
         }];
 
-    const [selectedTag, setSelectedTag] = useState<string | null>(null);
-    
+    const [selectedTag, setSelectedTag] = useState<string|null>(null);
+
     const allTags = Array.from(new Set(projectArray.flatMap(project => project.badges)));
 
     const filteredProjects = selectedTag
@@ -251,18 +254,20 @@ const ProjectsPage = () => {
 
     return (
         <section className="container mx-auto p-2 xl:p-5">
-            <NavigateBar />
+            <NavigateBar/>
 
             <article className="space-y-10 my-5">
                 <div>
-                    <h1 className="als-gorizont text-3xl xl:text-[90px] xl:leading-[100px] -tracking-[0.06em] font-black text-zinc-100">Мои проекты</h1>
-                    
-                    <p className="als-gorizont text-lg xl:text-xl font-medium xl:leading-6 text-zinc-400">Некоторые из проектов связаны с работой, <br /> а некоторые - с моим личным временем.</p>
+                    <h1 className="als-gorizont text-3xl xl:text-[90px] xl:leading-[100px] -tracking-[0.06em] font-black text-zinc-100">Мои
+                        проекты</h1>
+
+                    <p className="als-gorizont text-lg xl:text-xl font-medium xl:leading-6 text-zinc-400">Некоторые из
+                        проектов связаны с работой, <br/> а некоторые - с моим личным временем.</p>
                 </div>
 
                 <div>
                     <h2 className="als-gorizont text-2xl font-bold text-zinc-100">Фильтр по тегам:</h2>
-                    
+
                     <div className="flex flex-wrap mt-2">
                         {allTags.map((tag, index) => (
                             <button
@@ -280,7 +285,7 @@ const ProjectsPage = () => {
                 <div className="grid mb-8 rounded-lg shadow-sm xl:mb-12 grid-cols-1 gap-4 mt-4">
                     {filteredProjects.length > 0 ? (
                         <>
-                            {filteredProjects.map((item: ProjectItemProps, index: number) => (
+                            {filteredProjects.map((item:ProjectItemProps, index:number) => (
                                 <ProjectItem key={index} {...item} />
                             ))}
                         </>
@@ -293,5 +298,3 @@ const ProjectsPage = () => {
         </section>
     )
 }
-
-export default ProjectsPage;

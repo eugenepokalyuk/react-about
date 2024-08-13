@@ -1,6 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
-import { ABOUT_PATH, PROJECTS_PATH } from "../../utils/routePath";
+import {Urls} from "../../utils/routePath";
 
 const NavigateBar = () => {
     const location = useLocation();
@@ -25,8 +25,8 @@ const NavigateBar = () => {
                 </button>
             </Link>
 
-            {location.pathname !== PROJECTS_PATH && (
-                <Link to={PROJECTS_PATH} className="hidden md:block">
+            {location.pathname !== Urls.Projects && (
+                <Link to={Urls.Projects} className="hidden md:block">
                     <button
                         className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
                         Мои проекты
@@ -34,8 +34,8 @@ const NavigateBar = () => {
                 </Link>
             )}
 
-            {location.pathname !== ABOUT_PATH && (
-                <Link to={ABOUT_PATH} className="hidden md:block">
+            {location.pathname !== Urls.About && (
+                <Link to={Urls.About} className="hidden md:block">
                     <button
                         className='flex fill-[#FFD600] bg-[#ffffff08] text-[#FFD600] text-[16px] italic font-[400] leading-[22px] eb-garamond hover:cursor-pointer hover:underline rounded-md px-2 py-1 mt-2'>
                         Самопрезентация

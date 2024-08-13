@@ -1,6 +1,5 @@
-const ErrorPage = () => {
+export const ErrorPage = () => {
     return (
-        <>1</>
+        <>Данная страница не найдена</>
     )
 }
-export default ErrorPage;
