@@ -1,6 +1,7 @@
 export enum Urls {
-    Home = "/",
-    Projects = "/projects",
-    About = "/about",
-    Error = "*"
+  Home = '/',
+  Projects = '/projects',
+  About = '/about',
+  WishList = '/wish-list',
+  Error = '*'
 }
