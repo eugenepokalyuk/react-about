@@ -20,6 +20,7 @@ const GreetingSection:FC<GreetingSectionProps> = ({ sceneData }) => {
     <section className="flex flex-col justify-between h-full xl:h-screen w-full p-5 pb-0">
       <div className="flex space-x-[36px]">
         <img src={Avatar} alt="Evgeny" className="xl:hidden rounded-full w-[70px] h-[110px] object-cover" />
+
         <h1
           className="text-[28px] xl:text-[48px] text-[#FFFFFF] font-[400] leading-[34px] xl:leading-[56px] ibm-plex max-w-xs xl:max-w-[620px]">Привет!
           Меня зовут Евгений. Я занимаюсь фронтенд разработкой</h1>

@@ -1,5 +1,15 @@
 import { ProjectItemProps } from './types.ts';
 
+interface ProjectItemProps {
+  url:string,
+  urlGitHub:string,
+  img?:string,
+  badges:string[],
+  title:string,
+  description:string
+}
+
+
 export const ProjectArray:ProjectItemProps[] = [
   {
     url: 'https://react-skilla.vercel.app/',

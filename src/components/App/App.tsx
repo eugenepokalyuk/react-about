@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 import './App.css';
 import { About } from '../../pages/About/About.tsx';
@@ -7,11 +7,16 @@ import { Home } from '../../pages/Home/Home.tsx';
 import { Projects } from '../../pages/Projects/Projects.tsx';
 import { WishList } from '../../pages/WishList/WishList.tsx';
 import { Urls } from '../../utils/routePath';
+import { useEffect } from 'react';
 
 const App = () => {
   const location = useLocation();
 
   const background = location.state && location.state.background;
+
+  useEffect(() => {
+    window.location.href = 'https://eugenepokalyuk.vercel.app/';
+  }, []);
 
   return (
     <Routes location={background || location}>
