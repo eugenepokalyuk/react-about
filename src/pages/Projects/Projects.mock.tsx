@@ -1,5 +1,3 @@
-import { ProjectItemProps } from './types.ts';
-
 interface ProjectItemProps {
   url:string,
   urlGitHub:string,
